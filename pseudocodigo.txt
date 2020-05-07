@@ -1,0 +1,17 @@
+Algoritmos y Estrutura de Datos
+Proyecto No. 2
+Grupo 10
+06/05/2020
+
+PSEUDOCÓDIGO
+
+-Pedir al usuario qué tipo de clima le gusta más.
+-Pedir al usuario si viaja sólo o acompañado.
+-Si va acompañado, que indique si de familia o amigos.
+-Pedir al usuario si busca tranquilidad o aventura.
+-Pedir al usuario si el hotel es importante para él.
+-Si es importante que indique si prefiere un hotel con piscina, restaurante/bar,
+aire acondicionado, habitaciones grandes, juegos/actividades para realizar dentro,
+o con todas las opciones.
+-Desplegar la lista de opciones de lugares turísticos para visitar según lo
+indicado anteriormente por el usuario.
