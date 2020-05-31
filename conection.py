@@ -1,7 +1,8 @@
 from py2neo import Graph, NodeMatcher
 
-grafo = Graph("bolt://localhost:7473", auth=("neo4j","1234"))
+grafo = Graph("bolt://localhost:7687", auth=("neo4j","1234"), encrypted = False)
 matcher = NodeMatcher(grafo)
+
 #7474
 #7473
 
