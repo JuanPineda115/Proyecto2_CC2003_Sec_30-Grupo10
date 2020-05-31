@@ -1,6 +1,6 @@
 from py2neo import Graph, NodeMatcher
 
-grafo = Graph("bolt://localhost:7687", auth=("neo4j","1234"))
+grafo = Graph("bolt://localhost:7687", auth=("neo4j","1234"), encrypted=False)
 matcher = NodeMatcher(grafo)
 
 
@@ -32,22 +32,13 @@ def menu():
     personas = input (" - De las opciones anteriores, escoja la que más se adecue a su gusto (escriba la opcion tal y como aparece, sin '-'): ")
 
 
-#    statement1 = "MATCH(I:Lugar) <-[:pertenece]-(s:Actividades{Actividades: '" +actividad+ "'}) return l"
-#    response1 = grafo.run(statement1).to_table()
-#    print(response1)
-#    
-#    statement2 = "MATCH(I:Lugar) <-[:pertenece]-(s:Clima{Clima: '" +clima+ "'}) return l"
-#    response2 = grafo.run(statement2).to_table()
-#    print(response2)
-#    
-#    statement3 = "MATCH(I:Lugar) <-[:pertenece]-(s:Personas{Personas: '" +personas+ "'}) return l"
-#    response3 = grafo.run(statement3).to_table()
-#    print(response3)
-
-    matcher.match("lugar", Actividades="Aventuras").first()
-    matcher.match("lugar", Clima="Frio").first()
-    matcher.match("lugar", Personas="Solo").first()
+    response = matcher.match("lugar", Actividades="Aventuras")
+    matcher.match("lugar", Clima="Frio")
+    matcher.match("lugar", Personas="Solo")
     
+    
+    print(" ")
+    print(response)
     print(actividad)
     print(clima)
     print(personas)
